@@ -3,18 +3,21 @@ using System.Collections;
 
 public class Death : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
+    
+    void Explode()
+    {
+        var exp = GetComponent<ParticleSystem>();
+        exp.Play();        
+    }
+
+
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "ball")
         {
-            Debug.Log("coliders");
+            Explode();
             Destroy(col.gameObject);
+            transform.GetComponent<Renderer>().material.color = Color.grey;
         }
     }
     
