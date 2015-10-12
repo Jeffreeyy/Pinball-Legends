@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class scoreCount : MonoBehaviour {
-    int score = 0;
+    public static int score = 0;
 
     void OnCollisionEnter(Collision col)
     {
