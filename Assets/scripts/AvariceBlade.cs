@@ -16,7 +16,7 @@ public class AvariceBlade : MonoBehaviour {
 	}
 	
 	void OnMouseDown(){
-		if (scoreCount.score >= 1200) {
+		if (scoreCount.score >= 1200 && scoreCount.AvariceBlade == false) {
 			rend.material = avariceBladeUnavailable;
 			scoreCount.score = scoreCount.score - 1200;
 			scoreCount.AvariceBlade = true;

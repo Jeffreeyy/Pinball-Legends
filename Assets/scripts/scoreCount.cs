@@ -23,5 +23,14 @@ public class scoreCount : MonoBehaviour {
 		{
 			score = score + 125 + BonusGold;
 		}
+
+        if (col.gameObject.tag == "EnemyNexus")
+        {
+            score = score + 250 + BonusGold;
+        }
+        if (col.gameObject.tag == "Inhib")
+        {
+            score = score + 175 + BonusGold;
+        }
     }
 }
