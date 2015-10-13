@@ -6,7 +6,7 @@ public class scoreCount : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "ball")
+        if (col.gameObject.name == "Ball")
         {
             score = score + 10;
             Debug.Log(score);

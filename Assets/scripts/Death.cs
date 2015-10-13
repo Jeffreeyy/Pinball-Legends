@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Death : MonoBehaviour {
@@ -13,7 +13,7 @@ public class Death : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "ball")
+        if (col.gameObject.name == "Ball")
         {
             Explode();
             Destroy(col.gameObject);
