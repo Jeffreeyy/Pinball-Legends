@@ -16,7 +16,7 @@ public class scoreCount : MonoBehaviour {
     {
         if (col.gameObject.tag == "Buff")
         {
-            score = score + 60 + BonusGold;
+			score = score + 60 + BonusGold;
         }
 
 		if (col.gameObject.tag == "Turret")
@@ -26,11 +26,15 @@ public class scoreCount : MonoBehaviour {
 
         if (col.gameObject.tag == "EnemyNexus")
         {
-            score = score + 250 + BonusGold;
+			score = score + 250 + BonusGold;
         }
         if (col.gameObject.tag == "Inhib")
         {
-            score = score + 175 + BonusGold;
+			score = score + 175 + BonusGold;
         }
+		if (col.gameObject.tag == "Drake") 
+		{
+			score = score + 190 + BonusGold;
+		}
     }
 }

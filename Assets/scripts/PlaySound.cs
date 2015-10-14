@@ -4,7 +4,8 @@ using System.Collections;
 public class PlaySound : MonoBehaviour {
 
 	private AudioSource caitAA;
-	public AudioClip source;
+	public AudioClip turretSound;
+	public AudioClip drakeSound;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,10 @@ public class PlaySound : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "Turret") {
-			caitAA.PlayOneShot(source, 1f);
+			caitAA.PlayOneShot(turretSound, 2f);
+		}
+		if (col.gameObject.tag == "Drake") {
+			caitAA.PlayOneShot(drakeSound, 0.3f);
 		}
 	}
 }

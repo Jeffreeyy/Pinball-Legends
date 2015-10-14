@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class AvariceBlade : MonoBehaviour {
 
-	public Material avariceBladeUnavailable;
-	public Renderer rend;
+	public GameObject toggle;
+	private AudioSource kaChing;
 	// Use this for initialization
+
 	void Start () {
-		
+		kaChing = GetComponent<AudioSource> ();
+		toggle.SetActive (!toggle.activeSelf);
 	}
 	
 	// Update is called once per frame
@@ -15,9 +17,10 @@ public class AvariceBlade : MonoBehaviour {
 		
 	}
 	
-	void OnMouseDown(){
+	public void OnMouseDown(){
 		if (scoreCount.score >= 1200 && scoreCount.AvariceBlade == false) {
-			rend.material = avariceBladeUnavailable;
+			kaChing.Play();
+			toggle.SetActive (!toggle.activeSelf);
 			scoreCount.score = scoreCount.score - 1200;
 			scoreCount.AvariceBlade = true;
 		}
