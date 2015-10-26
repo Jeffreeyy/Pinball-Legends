@@ -24,5 +24,9 @@ public class PlaySound : MonoBehaviour {
 		if (col.gameObject.tag == "Drake") {
 			caitAA.PlayOneShot(drakeSound, 0.3f);
 		}
+        if (col.gameObject.tag == "Baron")
+        {
+            caitAA.PlayOneShot(drakeSound, 0.3f);
+        }
 	}
 }

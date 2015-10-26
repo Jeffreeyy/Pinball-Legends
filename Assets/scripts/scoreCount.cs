@@ -36,5 +36,9 @@ public class scoreCount : MonoBehaviour {
 		{
 			score = score + 190 + BonusGold;
 		}
+        if (col.gameObject.tag == "Baron")
+        {
+            score = score + 200 + BonusGold;
+        }
     }
 }
