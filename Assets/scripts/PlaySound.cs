@@ -2,27 +2,35 @@ using UnityEngine;
 using System.Collections;
 
 public class PlaySound : MonoBehaviour {
-
-	private AudioSource caitAA;
-	public AudioClip turretSound;
-	public AudioClip drakeSound;
+	
+	private AudioSource sound;
+	[SerializeField]private GameObject toggle;
+	[SerializeField]private GameObject GA;
+	[SerializeField]private AudioClip turretSound;
+	[SerializeField]private AudioClip drakeSound;
+	[SerializeField]private AudioClip reviveSound;
 
 	// Use this for initialization
 	void Start () {
-		caitAA = GetComponent<AudioSource> ();
+		sound = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "Turret") {
-			caitAA.PlayOneShot(turretSound, 2f);
+			sound.PlayOneShot(turretSound, 2f);
 		}
 		if (col.gameObject.tag == "Drake") {
-			caitAA.PlayOneShot(drakeSound, 0.3f);
+			sound.PlayOneShot(drakeSound, 0.3f);
+		}
+		if (col.gameObject.tag == "GuardianAngel") {
+			sound.PlayOneShot(reviveSound, 0.3f);
+			Destroy(col.gameObject);
+			scoreCount.GuardianAngel = false;
+			toggle.SetActive(!toggle.activeSelf);
 		}
         if (col.gameObject.tag == "Baron")
         {
