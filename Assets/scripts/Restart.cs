@@ -9,6 +9,8 @@ public class Restart : MonoBehaviour {
         {
             Application.LoadLevel(0); //or whatever number your scene is
             scoreCount.score = 0;
+            scoreCount.GuardianAngel = false;
+            scoreCount.AvariceBlade = false;
         }
     }
 }

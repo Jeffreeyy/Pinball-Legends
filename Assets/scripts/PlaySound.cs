@@ -34,7 +34,7 @@ public class PlaySound : MonoBehaviour {
 		}
         if (col.gameObject.tag == "Baron")
         {
-            caitAA.PlayOneShot(drakeSound, 0.3f);
+            sound.PlayOneShot(drakeSound, 0.3f);
         }
 	}
 }
