@@ -22,7 +22,7 @@ public class scoreCount : MonoBehaviour {
 
 		if (col.gameObject.tag == "Turret")
 		{
-			score = score + 10000 + BonusGold;
+			score = score + 125 + BonusGold;
 		}
 
         if (col.gameObject.tag == "EnemyNexus")

@@ -21,20 +21,20 @@ public class PlaySound : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.tag == "Turret") {
-			sound.PlayOneShot(turretSound, 2f);
+			sound.PlayOneShot(turretSound, 10f);
 		}
 		if (col.gameObject.tag == "Drake") {
-			sound.PlayOneShot(drakeSound, 0.3f);
+			sound.PlayOneShot(drakeSound, 10f);
 		}
 		if (col.gameObject.tag == "GuardianAngel") {
-			sound.PlayOneShot(reviveSound, 0.3f);
+			sound.PlayOneShot(reviveSound, 10f);
 			Destroy(col.gameObject);
 			scoreCount.GuardianAngel = false;
 			toggle.SetActive(!toggle.activeSelf);
 		}
         if (col.gameObject.tag == "Baron")
         {
-            sound.PlayOneShot(drakeSound, 0.3f);
+            sound.PlayOneShot(drakeSound, 10f);
         }
 	}
 }
