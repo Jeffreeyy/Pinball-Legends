@@ -9,7 +9,7 @@ public class Flipper : MonoBehaviour {
 	public Vector3 l_com;
 	public Vector3 r_com;
 
-	private float _forceAmount = 40f;
+	private float _forceAmount = 10f;
 	private Rigidbody rb;
 
 	void Awake(){
@@ -30,7 +30,7 @@ public class Flipper : MonoBehaviour {
 	private void Flippers(){
 		if (this.Left)
 		{
-			if(Input.GetKey (KeyCode.A))
+			if(Input.GetKey (KeyCode.LeftShift))
 			{
 				rb.AddForce(transform.forward * _forceAmount, ForceMode.Impulse);
 			}
@@ -43,7 +43,7 @@ public class Flipper : MonoBehaviour {
 
 		if (this.Right)
 		{
-			if(Input.GetKey (KeyCode.D))
+			if(Input.GetKey (KeyCode.RightShift))
 			{
 				rb.AddForce(transform.forward * _forceAmount, ForceMode.Impulse);
 			}
