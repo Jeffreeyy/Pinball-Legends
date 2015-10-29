@@ -9,7 +9,7 @@ public class Flipper : MonoBehaviour {
 	public Vector3 l_com;
 	public Vector3 r_com;
 
-	private float _forceAmount = 10f;
+	private float _forceAmount = 15f;
 	private Rigidbody rb;
 
 	void Awake(){
@@ -36,7 +36,7 @@ public class Flipper : MonoBehaviour {
 			}
 			else
 			{
-				rb.AddForce(-transform.forward * 2f, ForceMode.Impulse);
+				rb.AddForce(-transform.forward, ForceMode.Impulse);
 			}
 		}
 
@@ -49,7 +49,7 @@ public class Flipper : MonoBehaviour {
 			}
 			else
 			{
-				rb.AddForce(-transform.forward * 2f, ForceMode.Impulse);
+				rb.AddForce(-transform.forward, ForceMode.Impulse);
 			}
 		}
 	}
