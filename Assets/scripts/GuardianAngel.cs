@@ -17,7 +17,7 @@ public class GuardianAngel : MonoBehaviour {
 	}
 
 	public void OnMouseDown(){
-		if (scoreCount.score >= 10000 && scoreCount.GuardianAngel == false) {
+		if (scoreCount.score >= 5000 && scoreCount.GuardianAngel == false) {
 			kaChing.Play();
 			toggle.SetActive(!toggle.activeSelf);
 			scoreCount.score = scoreCount.score - 10000;
