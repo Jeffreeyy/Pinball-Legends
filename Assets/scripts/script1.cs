@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class script1 : MonoBehaviour {
@@ -10,17 +10,6 @@ public class script1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		string url = "http://localhost/phpJaar2/phpToUnity.php";
-		
-		WWWForm form = new WWWForm ();
-		
-		form.AddField("score", scoreOfzo);
-		
-		form.AddField("name", name);
-		
-		WWW www = new WWW (url, form);
-		
-		StartCoroutine (WaitForRequest (www));
 	}
 
 	IEnumerator WaitForRequest(WWW www)
@@ -39,17 +28,19 @@ public class script1 : MonoBehaviour {
 
 	public void OnMouseDown()
 	{
-		string url = "http://localhost/phpJaar2/phpToUnity.php";
+		if (name != null) {
+			string url = "http://localhost/phpJaar2/phpToUnity.php";
 		
-		WWWForm form = new WWWForm ();
+			WWWForm form = new WWWForm ();
 		
-		form.AddField("score", scoreOfzo);
+			form.AddField ("score", scoreOfzo);
 		
-		form.AddField("name", name);
+			form.AddField ("name", name);
 		
-		WWW www = new WWW (url, form);
+			WWW www = new WWW (url, form);
 		
-		StartCoroutine (WaitForRequest (www));
+			StartCoroutine (WaitForRequest (www));
+		}
 	}
 
 }

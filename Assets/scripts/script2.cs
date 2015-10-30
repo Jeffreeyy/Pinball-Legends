@@ -4,14 +4,14 @@ using UnityEngine.UI;
 public class script2 : MonoBehaviour {
 	
 	
-	public int scoreOfzo = 1;
+	private int scoreOfso;
 	//public string[] stringArray;
 	public Text fileText;
-    /*public Text fileText2;
+    public Text fileText2;
     public Text fileText3;
     public Text fileText4;
     public Text fileText5;
-    public Text fileText6;*/
+    public Text fileText6;
 
     // Use this for initialization
     void Start () {
@@ -62,8 +62,8 @@ public class script2 : MonoBehaviour {
                 
             }
             fileText.text = splitData[count];
-            count++;
-            /*fileText2.text = splitData[count];
+            /*count++;
+            fileText2.text = splitData[count];
             count++;
             fileText3.text = splitData[count];
             count++;

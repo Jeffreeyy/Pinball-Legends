@@ -15,5 +15,8 @@ public class LoadGame : MonoBehaviour {
 
 	public void OnMouseDown(){
 		Application.LoadLevel ("Bronzo");
+		scoreCount.score = 0;
+		scoreCount.GuardianAngel = false;
+		scoreCount.AvariceBlade = false;
 	}
 }
