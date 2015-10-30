@@ -16,7 +16,6 @@ public class Death : MonoBehaviour {
         if (Lifes == 0) 
         {
             Application.LoadLevel("GameOver");
-            Debug.Log(Lifes);
         }
     }
 
@@ -24,10 +23,8 @@ public class Death : MonoBehaviour {
     {
         if (col.gameObject.name == "Ball" && Lifes != 0)
         {
-            //Explode();
 			col.gameObject.transform.position = _spawnPoint;
             Lifes--;
-            //transform.GetComponent<Renderer>().material.color = Color.grey;
         }
     }
     
