@@ -9,7 +9,7 @@ public class Flipper : MonoBehaviour {
 	public Vector3 l_com;
 	public Vector3 r_com;
 
-	private float _forceAmount = 15f;
+	private float _forceAmount = 20F;
 	private Rigidbody rb;
 
 	void Awake(){
